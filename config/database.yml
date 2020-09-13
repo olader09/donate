@@ -1,0 +1,29 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 8 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: donate_dev
+  username: igor
+  password: donate019
+  host: localhost
+  port: 5432
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: donate_test
+
+production:
+  <<: *default
+  database: deerkunpdod5ga
+  username: jrawyoamjketwp
+  password: ebde3fa007befe125cba38fc740d926235e68347dc7dc52bff35df2f318571de
+  host: ec2-54-217-224-85.eu-west-1.compute.amazonaws.com
+  port: 5432
