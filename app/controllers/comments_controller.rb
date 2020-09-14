@@ -38,7 +38,7 @@ class CommentsController < ApiBaseController
     end
   end
 
-  def find_comments_for_donate
+  def find_comments_for_donation
     comments = Comment.where(donation_id: params[:id])
     if comments.empty?
       render status: 204
