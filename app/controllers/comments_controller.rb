@@ -38,6 +38,15 @@ class CommentsController < ApiBaseController
     end
   end
 
+  def find_comments_for_donate
+    comments = Comment.where(donation_id: params[:id])
+    if comments.empty?
+      render status: 204
+    else
+      render json: comments, status: :ok
+    end
+  end
+
   protected
 
   def default_comment_fields
