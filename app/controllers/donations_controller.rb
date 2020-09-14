@@ -1,7 +1,7 @@
 class DonationsController < ApiBaseController
 
   def index
-    donations = donation.all
+    donations = Donation.all
     if donations.empty?
       render status: 204
     else
@@ -10,7 +10,7 @@ class DonationsController < ApiBaseController
   end
 
   def show
-    @donation = donation.find(params[:id])
+    @donation = Donation.find(params[:id])
     if @donation.errors.blank?
       render json: @donation, status: :ok
     else
@@ -19,7 +19,7 @@ class DonationsController < ApiBaseController
   end
 
   def create
-    @donation = donation.create(create_donation_params)
+    @donation = Donation.create(create_donation_params)
     if @donation.errors.blank?
       render status: :ok
     else
@@ -28,7 +28,7 @@ class DonationsController < ApiBaseController
   end
 
   def update
-    @donation = donation.find(params[:id])
+    @donation = Donation.find(params[:id])
     if @donation.errors.blank?
       @donation.update(update_donation_params)
       render status: :ok
@@ -38,7 +38,7 @@ class DonationsController < ApiBaseController
   end
 
   def destroy
-    @donation = donation.find(params[:id])
+    @donation = Donation.find(params[:id])
     if @donation.errors.blank?
       @donation.delete
       render status: :ok
