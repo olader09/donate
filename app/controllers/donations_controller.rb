@@ -21,7 +21,7 @@ class DonationsController < ApiBaseController
   def create
     @donation = Donation.create(create_donation_params)
     if @donation.errors.blank?
-      render status: :ok
+      render json: @donation, status: :ok
     else
       render json: @donation.errors, status: :bad_request
     end
