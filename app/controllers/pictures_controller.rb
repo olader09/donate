@@ -6,6 +6,7 @@ class PicturesController < ApiBaseController
       render status: 204
     else
       render json: pictures
+    end
   end
 
   def show
