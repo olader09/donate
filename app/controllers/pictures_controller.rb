@@ -1,7 +1,11 @@
 class PicturesController < ApiBaseController
 
   def index
-
+    pictures = Picture.all
+    if pictures.empty?
+      render status: 204
+    else
+      render json: pictures
   end
 
   def show
