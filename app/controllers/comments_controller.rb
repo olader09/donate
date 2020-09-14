@@ -50,7 +50,7 @@ class CommentsController < ApiBaseController
   protected
 
   def default_comment_fields
-    %i[name content donation_id]
+    %i[name content donation_id avatar]
   end
 
   def update_comment_params
