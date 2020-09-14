@@ -15,7 +15,7 @@ class PicturesController < ApiBaseController
 
   def create
     @picture = Picture.create(create_picture_params)
-    if @donate.errors.blank?
+    if @picture.errors.blank?
       render json: @picture, status: :ok
     else
       render json: @picture.errors, status: :bad_request
