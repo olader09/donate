@@ -6,7 +6,7 @@ class CreateDonations < ActiveRecord::Migration[6.0]
       t.string :aim
       t.string :description
       t.string :author
-      t.string :type
+      t.string :type_of
       t.string :date_close
       t.string :picture
       t.timestamps

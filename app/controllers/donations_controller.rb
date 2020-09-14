@@ -50,7 +50,7 @@ class DonationsController < ApiBaseController
   protected
 
   def default_donation_fields
-    %i[name sum author aim type description date_close picture]
+    %i[name sum author aim type_of description date_close picture]
   end
 
   def update_donation_params

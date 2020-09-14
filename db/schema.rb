@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_09_14_051839) do
     t.string "aim"
     t.string "description"
     t.string "author"
-    t.string "type"
+    t.string "type_of"
     t.string "date_close"
     t.string "picture"
     t.datetime "created_at", precision: 6, null: false
