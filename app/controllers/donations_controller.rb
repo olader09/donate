@@ -47,6 +47,17 @@ class DonationsController < ApiBaseController
     end
   end
 
+  def donate
+    @donation = Donation.find(params[:id])
+    if @donation.errors.blank?
+      @donation.update(progress: @donation.progress + params[:count])
+      render json: @donation, status: :ok
+    else
+      render json: @donation.errors, status: :bad_request
+    end
+  end
+  
+
   protected
 
   def default_donation_fields
