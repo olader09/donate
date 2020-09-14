@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_09_14_083900) do
   create_table "donations", force: :cascade do |t|
     t.string "name"
     t.integer "sum", default: 0, null: false
-    t.string "aim"
+    t.integer "aim", default: 1, null: false
     t.string "description"
     t.string "author"
     t.string "type_of"
