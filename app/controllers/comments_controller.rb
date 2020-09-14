@@ -1,4 +1,4 @@
-class DonationsController < ApiBaseController
+class CommentsController < ApiBaseController
 
   def index
     comments = Comment.all
