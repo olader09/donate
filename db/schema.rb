@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_14_083900) do
+ActiveRecord::Schema.define(version: 2020_09_17_181046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,16 @@ ActiveRecord::Schema.define(version: 2020_09_14_083900) do
 
   create_table "pictures", force: :cascade do |t|
     t.string "picture"
+  end
+
+  create_table "podcasts", force: :cascade do |t|
+    t.string "name", default: ""
+    t.string "description", default: ""
+    t.string "picture", default: ""
+    t.jsonb "timecodes", default: {}
+    t.string "audio", default: ""
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

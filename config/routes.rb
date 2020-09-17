@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :podcasts
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :donations do
     post :donate, on: :collection
