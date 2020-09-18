@@ -49,7 +49,7 @@ class PodcastsController < ApiBaseController
   protected
 
   def default_podcast_fields
-    %i[name description audio timecodes picture author]
+    %i[name description audio timecodes picture author author_id]
   end
 
   def update_podcast_params
