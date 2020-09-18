@@ -53,7 +53,7 @@ class PostsController < ApiBaseController
   protected
 
   def default_post_fields
-    %i[content latitude longitude subject mood author_name author_avatar count_likes count_comments count_reposts ]
+    %i[content latitude longitude subject mood author_name author_avatar picture count_likes count_comments count_reposts ]
   end
 
   def update_post_params
