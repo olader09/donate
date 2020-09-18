@@ -62,9 +62,9 @@ ActiveRecord::Schema.define(version: 2020_09_18_205105) do
     t.string "mood", default: ""
     t.string "author_name", default: ""
     t.string "author_avatar", default: ""
-    t.integer "count_likes"
-    t.integer "count_comments"
-    t.integer "count_reposts"
+    t.integer "count_likes", default: 0
+    t.integer "count_comments", default: 0
+    t.integer "count_reposts", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

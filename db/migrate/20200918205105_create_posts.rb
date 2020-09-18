@@ -8,9 +8,9 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.string :mood, default: ""
       t.string :author_name, default: ""
       t.string :author_avatar, default: ""
-      t.integer :count_likes, default: ""
-      t.integer :count_comments, default: ""
-      t.integer :count_reposts, default: ""
+      t.integer :count_likes, default: 0
+      t.integer :count_comments, default: 0
+      t.integer :count_reposts, default: 0
       t.timestamps
     end
   end
