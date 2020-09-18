@@ -6,6 +6,7 @@ class CreatePodcasts < ActiveRecord::Migration[6.0]
       t.string :picture, default: ""
       t.jsonb :timecodes, default: {}
       t.string :audio, default: ""
+      t.string :author, default: ""
       t.timestamps
     end
   end
