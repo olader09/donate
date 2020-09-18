@@ -30,7 +30,7 @@ class PodcastsController < ApiBaseController
     @podcast = Podcast.find(params[:id])
     if @podcast.errors.blank?
       @podcast.update(update_podcast_params)
-      render status: :ok
+      render @podcast, status: :ok
     else
       render json: @podcast.errors, status: :bad_request
     end
