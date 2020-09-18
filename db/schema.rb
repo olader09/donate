@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_17_181046) do
+ActiveRecord::Schema.define(version: 2020_09_18_205105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,22 @@ ActiveRecord::Schema.define(version: 2020_09_17_181046) do
     t.jsonb "timecodes", default: {}
     t.string "audio", default: ""
     t.string "author", default: ""
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "author_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.text "content", default: ""
+    t.float "latitude", default: 0.0
+    t.float "longitude", default: 0.0
+    t.string "subject", default: ""
+    t.string "mood", default: ""
+    t.string "author_name", default: ""
+    t.string "author_avatar", default: ""
+    t.integer "count_likes"
+    t.integer "count_comments"
+    t.integer "count_reposts"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
