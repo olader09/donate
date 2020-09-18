@@ -8,7 +8,7 @@ default: &default
 development:
   <<: *default
   database: donate_dev
-  username: igor
+  username: igor2
   password: donate019
   host: localhost
   port: 5432

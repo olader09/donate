@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_09_17_181046) do
     t.string "picture", default: ""
     t.jsonb "timecodes", default: {}
     t.string "audio", default: ""
+    t.string "author", default: ""
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

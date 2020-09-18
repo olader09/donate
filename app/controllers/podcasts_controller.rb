@@ -28,7 +28,7 @@ class PodcastsController < ApiBaseController
 
   def update
     @podcast = Podcast.find(params[:id])
-    if @donation.errors.blank?
+    if @podcast.errors.blank?
       @podcast.update(update_podcast_params)
       render status: :ok
     else
