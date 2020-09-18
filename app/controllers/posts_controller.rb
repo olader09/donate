@@ -18,7 +18,11 @@ class PostsController < ApiBaseController
   end
 
   def create
-    @post = Post.create(create_post_params)
+    @post = Post.new(create_post_params)
+    @post.count_likes = rand(0..9999)
+    @post.count_comments = rand(0..999)
+    @post.count_reposts = rand(0..99)
+    @post.save
     if @post.errors.blank?
       render json: @post, status: :ok
     else
